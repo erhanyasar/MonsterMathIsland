@@ -4,6 +4,7 @@ using UnityEngine;
 public class QuestionManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text _questionTextField;
+    [SerializeField] private TMP_InputField _answerInputField;
     
     private string _question;
     [SerializeField] private float _answer;
@@ -35,6 +36,9 @@ public class QuestionManager : MonoBehaviour
         }
 
         _questionTextField.text = _question;
+        
+        //Force focus to answer input field
+        _answerInputField.Select();
     }
 
     // Update is called once per frame
